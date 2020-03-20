@@ -28,6 +28,7 @@
                         <tr><td>Port OpenSSH</td><td>:</td><td>22, 143</td></tr>
                         <tr><td>Port OpenVPN</td><td>:</td><td>1194</td></tr>
                         <tr><td>Port Squid</td><td>:</td><td>8000, 8080</td></tr>
+                        <tr><td>Expired Date</td><td>:</td><td>{{ \Webmin::exp_decode(@user->expire) }}</td></tr>
                         <tr>
                             <td colspan="3">
                                 <a href="/home/member/server" class="btn btn-primary">Back!</a>

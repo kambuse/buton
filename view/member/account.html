@@ -1,0 +1,41 @@
+<div id="page-wrapper">
+    <div class="row">
+        <div class="col-lg-12">
+            <h1 class="page-header">
+                SSH Account
+            </h1>
+        </div>
+    </div>
+    <div class="row">
+        <check if="{{ @message }}">
+            <div class="col-lg-12 hidden-print">                    
+                <div class="alert alert-{{ @message['type'] }}">{{ @message['data'] }}</div>
+            </div>
+        </check>
+        <div class="col-md-6">
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <i class="fa fa-user fa-fw"></i> Account Details
+                </div>
+                <table class="table table-hover">
+                    <tbody>
+                        <tr><td>Lokasi</td><td width="20px">:</td><td>{{ @server->country }}</td></tr>
+                        <tr><td>Host</td><td>:</td><td>{{ @server->host }}</td></tr>
+                        <tr><td>Username</td><td>:</td><td>{{ @user->user }}</td></tr>
+                        <tr><td>Password</td><td>:</td><td>{{ @user->pass }}</td></tr>
+                        <tr><td>Port Dropbear</td><td>:</td><td>80, 109</td></tr>
+                        <tr><td>Port SSL</td><td>:</td><td>443</td></tr>
+                        <tr><td>Port OpenSSH</td><td>:</td><td>22, 143</td></tr>
+                        <tr><td>Port OpenVPN</td><td>:</td><td>1194</td></tr>
+                        <tr><td>Port Squid</td><td>:</td><td>8000, 8080</td></tr>
+                        <tr>
+                            <td colspan="3">
+                                <a href="/home/member/server" class="btn btn-primary">Back!</a>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
